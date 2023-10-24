@@ -17,3 +17,16 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Wan_Android_App"
 include ':app'
+include ':lib_framework'
+include ':lib_banner'
+include ':lib_common'
+include ':lib_glide'
+include ':lib_network'
+include ':lib_room'
+include ':lib_stater'
+include ':mod_demo'
+include ':mode_login'
+include ':mod_main'
+include ':mod_search'
+include ':mod_user'
+include ':mod_video'
