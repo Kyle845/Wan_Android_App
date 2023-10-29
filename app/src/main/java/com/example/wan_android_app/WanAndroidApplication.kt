@@ -5,6 +5,7 @@ import android.app.Application
 import android.content.Context
 import android.os.Bundle
 import androidx.multidex.MultiDex
+import com.example.lib_framework.toast.TipToast
 
 class WanAndroidApplication : Application() {
     override fun attachBaseContext(base: Context?) {
@@ -15,6 +16,8 @@ class WanAndroidApplication : Application() {
     override fun onCreate() {
         super.onCreate()
         appFrontBackRegister()
+        registerActivityLifecycle()
+        TipToast.init(this)
 
     }
 

@@ -19,11 +19,11 @@
             <option value="$PROJECT_DIR$/lib_room" />
             <option value="$PROJECT_DIR$/lib_stater" />
             <option value="$PROJECT_DIR$/mod_demo" />
+            <option value="$PROJECT_DIR$/mod_login" />
             <option value="$PROJECT_DIR$/mod_main" />
             <option value="$PROJECT_DIR$/mod_search" />
             <option value="$PROJECT_DIR$/mod_user" />
             <option value="$PROJECT_DIR$/mod_video" />
-            <option value="$PROJECT_DIR$/mode_login" />
           </set>
         </option>
       </GradleProjectSettings>
