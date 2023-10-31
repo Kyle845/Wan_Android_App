@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace 'com.example.wan_android_app'
-    compileSdk 33
+    compileSdk rootProject.android.compileSdk
     signingConfigs {
         debug {
             storeFile file('../WanAndroidApp.jks')

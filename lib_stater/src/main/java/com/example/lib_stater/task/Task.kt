@@ -77,6 +77,10 @@ abstract class Task: ITask {
         return true
     }
 
+    override fun needCall(): Boolean {
+        return true
+    }
+
     abstract class MainTask : Task() {
         override fun runOnMainThread(): Boolean {
             return true

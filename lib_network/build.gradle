@@ -5,11 +5,11 @@ plugins {
 
 android {
     namespace 'com.example.lib_network'
-    compileSdk 33
+    compileSdk rootProject.android.compileSdk
 
     defaultConfig {
-        minSdk 24
-        targetSdk 33
+        minSdk rootProject.android.minSdk
+        targetSdk rootProject.android.targetSdk
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -31,11 +31,20 @@ android {
 }
 
 dependencies {
+    compileOnly fileTree(dir: 'libs', include: ['*.jar'])
+    compileOnly rootProject.depsLibs.coreKtx
+    compileOnly rootProject.depsLibs.appcompat
+    compileOnly rootProject.depsLibs.material
 
-    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.9.0'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
-}
+    compileOnly rootProject.depsLibs.retrofit2
+    compileOnly rootProject.depsLibs.retrofit2Gson
+    compileOnly rootProject.depsLibs.loggingInterceptor
+
+    compileOnly rootProject.depsLibs.mmkv
+
+    compileOnly rootProject.depsLibs.gson
+    compileOnly rootProject.depsLibs.liveDataKtx
+    compileOnly rootProject.depsLibs.viewModelKtx
+
+    compileOnly project(path: ':lib_framework')
+    compileOnly project(path: ':lib_common')}

@@ -1,10 +1,13 @@
 package com.example.lib_stater.dispatcher
 
 import android.app.Application
+import android.os.Build
 import android.os.Looper
 import android.util.Log
+import androidx.annotation.RequiresApi
 import androidx.annotation.UiThread
 import com.example.lib_stater.TaskStat
+import com.example.lib_stater.sort.TaskSortUtil
 import com.example.lib_stater.task.DispatchRunnable
 import com.example.lib_stater.task.Task
 import com.example.lib_stater.task.TaskCallBack
@@ -37,8 +40,15 @@ class TaskDispatcher private constructor(){
 
     fun addTask(task: Task?): TaskDispatcher {
         task?.let {
-
+            collectDepends(it)
+            mAllTasks.add(it)
+            mClsAllTasks.add(it.javaClass)
+            if (ifNeedWait(it)) {
+                mNeedWaitTasks.add(it)
+                mClsAllTasks.add(it.javaClass)
+            }
         }
+        return this
     }
 
     private fun collectDepends(task: Task) {
@@ -61,6 +71,7 @@ class TaskDispatcher private constructor(){
         return !task.runOnMainThread() && task.needWait()
     }
 
+    @RequiresApi(Build.VERSION_CODES.M)
     @UiThread
     fun start() {
         mStartTime = System.currentTimeMillis()
