@@ -1,4 +1,4 @@
-@file:JvmName("TipToast")
+@file:JvmName("TipsToast")
 package com.example.lib_framework.toast
 
 import android.app.Application
@@ -14,7 +14,7 @@ import com.example.lib_framework.R
 import com.example.lib_framework.databinding.WidgetTipsToastBinding
 
 
-object TipToast {
+object TipsToast {
     private var toast: Toast? = null
 
     private lateinit var mContext: Application

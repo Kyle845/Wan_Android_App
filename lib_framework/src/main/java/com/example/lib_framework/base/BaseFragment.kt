@@ -1,33 +1,35 @@
 package com.example.lib_framework.base
 
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import androidx.annotation.StringRes
-import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import com.example.lib_framework.R
 import com.example.lib_framework.toast.TipsToast
 import com.example.lib_framework.utils.LoadingUtils
 
-abstract class BaseActivity : AppCompatActivity() {
+abstract class BaseFragment : Fragment() {
     protected var TAG: String? = this::class.java.simpleName
 
+    protected var mIsViewCreate = false
+
     private val dialogUtils by lazy {
-        LoadingUtils(this)
+        LoadingUtils(requireContext())
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentLayout()
-        initView(savedInstanceState)
-        initData()
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, saveInstanceState: Bundle?): View? {
+        return getContentView(inflater,container)
     }
 
-    open fun setContentLayout() {
-        setContentView(getLayoutResId())
+    open fun getContentView(inflater: LayoutInflater, container: ViewGroup?): View {
+        return inflater.inflate(getLayoutResId(), null)
     }
 
     abstract fun getLayoutResId(): Int
 
-    abstract fun initView(savedInstanceState: Bundle?)
+    abstract fun initView(view: View,saveInstanceState: Bundle?)
 
     open fun initData() {}
 
@@ -37,6 +39,10 @@ abstract class BaseActivity : AppCompatActivity() {
 
     fun showLoading(msg: String?) {
         dialogUtils.showLoading(msg)
+    }
+
+    fun showLoading(@StringRes res: Int) {
+        showLoading(getString(res))
     }
 
     fun dismissLoading() {

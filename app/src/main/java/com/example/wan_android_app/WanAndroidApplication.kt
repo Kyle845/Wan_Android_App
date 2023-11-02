@@ -10,7 +10,7 @@ import androidx.multidex.MultiDex
 import com.example.lib_framework.log.LogUtil
 import com.example.lib_framework.manager.AppFrontBack
 import com.example.lib_framework.manager.AppFrontBackListener
-import com.example.lib_framework.toast.TipToast
+import com.example.lib_framework.toast.TipsToast
 import com.example.lib_stater.dispatcher.TaskDispatcher
 
 class WanAndroidApplication : Application() {
@@ -24,7 +24,7 @@ class WanAndroidApplication : Application() {
         super.onCreate()
         appFrontBackRegister()
         registerActivityLifecycle()
-        TipToast.init(this)
+        TipsToast.init(this)
         TaskDispatcher.init(this)
         val dispatcher: TaskDispatcher = TaskDispatcher.createInstance()
 
