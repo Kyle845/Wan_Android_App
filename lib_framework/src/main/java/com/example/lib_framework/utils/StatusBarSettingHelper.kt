@@ -23,7 +23,12 @@ object StatusBarSettingHelper {
             activity.findViewById<View>(R.id.nav_status_bar)
         navStatusBar?.setBackgroundColor(activity.resources.getColor(android.R.color.transparent))
         val result: Int = if (isLightModel) {
-            StatusBar
+            StatusBarUtil.setStatusBarLightMode(activity)
+        } else {
+            StatusBarUtil.setStatusBarDarkMode(activity)
+        }
+        if (result == StatusBarUtil.STATUS_BAR_TYPE_DEFAULT) {
+
         }
     }
 
