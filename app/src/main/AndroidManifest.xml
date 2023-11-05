@@ -29,6 +29,16 @@
         name:表示FileProvider的绝对路径
         grantUriPermissions:能授权接收端的app临时访问权限
         -->
+        <activity android:name="com.example.mod_main.ui.system.SplashActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/SplashAppTheme"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.fileProvider"
