@@ -1,10 +1,10 @@
-package com.sum.banner.annotation
+package com.example.lib_banner.annotation
 
 import androidx.annotation.IntDef
-import com.sum.banner.mode.PageStyle.MULTI_PAGE
-import com.sum.banner.mode.PageStyle.MULTI_PAGE_OVERLAP
-import com.sum.banner.mode.PageStyle.MULTI_PAGE_SCALE
-import com.sum.banner.mode.PageStyle.NORMAL
+import com.example.lib_banner.mode.PageStyle.MULTI_PAGE
+import com.example.lib_banner.mode.PageStyle.MULTI_PAGE_OVERLAP
+import com.example.lib_banner.mode.PageStyle.MULTI_PAGE_SCALE
+import com.example.lib_banner.mode.PageStyle.NORMAL
 import java.lang.annotation.ElementType
 
 /**

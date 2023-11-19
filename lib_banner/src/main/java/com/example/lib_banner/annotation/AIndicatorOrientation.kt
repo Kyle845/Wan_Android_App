@@ -1,7 +1,7 @@
-package com.sum.banner.annotation
+package com.example.lib_banner.annotation
 
 import androidx.annotation.IntDef
-import com.sum.banner.mode.IndicatorOrientation
+import com.example.lib_banner.mode.IndicatorOrientation
 
 /**
  * 指示器方向

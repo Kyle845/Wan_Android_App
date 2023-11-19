@@ -1,8 +1,8 @@
-package com.sum.banner.annotation
+package com.example.lib_banner.annotation
 
 import android.annotation.SuppressLint
 import androidx.annotation.IntDef
-import com.sum.banner.mode.IndicatorGravity
+import com.example.lib_banner.mode.IndicatorGravity
 import java.lang.annotation.ElementType
 import java.lang.annotation.Target
 

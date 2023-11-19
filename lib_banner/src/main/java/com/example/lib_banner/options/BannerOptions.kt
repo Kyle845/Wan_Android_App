@@ -1,11 +1,11 @@
-package com.sum.banner.options
+package com.example.lib_banner.options
 
 import android.view.View
 import androidx.viewpager2.widget.ViewPager2
-import com.sum.banner.mode.PageStyle
-import com.sum.banner.mode.IndicatorOrientation
-import com.sum.banner.transform.ScaleInTransformer.Companion.DEFAULT_MIN_SCALE
-import com.sum.framework.utils.dpToPx
+import com.example.lib_banner.mode.PageStyle
+import com.example.lib_banner.mode.IndicatorOrientation
+import com.example.lib_banner.transform.ScaleInTransformer.Companion.DEFAULT_MIN_SCALE
+import com.example.lib_framework.utils.dpToPx
 
 /**
  * Banner的配置参数

@@ -1,7 +1,7 @@
-package com.sum.banner.annotation
+package com.example.lib_banner.annotation
 
 import androidx.annotation.IntDef
-import com.sum.banner.mode.IndicatorStyle
+import com.example.lib_banner.mode.IndicatorStyle
 
 /**
  * 指示器样式

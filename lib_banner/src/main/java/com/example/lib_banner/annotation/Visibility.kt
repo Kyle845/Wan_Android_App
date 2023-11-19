@@ -1,4 +1,4 @@
-package com.sum.banner.annotation
+package com.example.lib_banner.annotation
 
 import android.view.View
 import androidx.annotation.IntDef

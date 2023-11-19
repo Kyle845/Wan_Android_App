@@ -1,12 +1,12 @@
-package com.sum.banner.options
+package com.example.lib_banner.options
 
 import android.graphics.Color
-import com.sum.banner.annotation.AIndicatorOrientation
-import com.sum.banner.annotation.AIndicatorSlideMode
-import com.sum.banner.annotation.AIndicatorStyle
-import com.sum.banner.mode.IndicatorOrientation
-import com.sum.banner.mode.IndicatorSlideMode
-import com.sum.framework.utils.dpToPx
+import com.example.lib_banner.annotation.AIndicatorOrientation
+import com.example.lib_banner.annotation.AIndicatorSlideMode
+import com.example.lib_banner.annotation.AIndicatorStyle
+import com.example.lib_banner.mode.IndicatorOrientation
+import com.example.lib_banner.mode.IndicatorSlideMode
+import com.example.lib_framework.utils.dpToPx
 
 /**
  * Indicator的配置参数
