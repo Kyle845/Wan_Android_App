@@ -1,18 +1,11 @@
 package com.example.mod_main.repository
 
+import com.example.lib_common.model.ArticleList
 import com.example.lib_common.model.Banner
 import com.example.lib_common.model.ProjectSubList
 import com.example.lib_common.model.ProjectTabItem
 import com.example.lib_network.manager.ApiManager
 import com.example.lib_network.repository.BaseRepository
-import com.sum.common.model.ArticleList
-import com.sum.common.model.Banner
-import com.sum.common.model.ProjectSubList
-import com.sum.network.manager.ApiManager
-import com.sum.common.model.ProjectTabItem
-import com.sum.network.repository.BaseRepository
-import com.sum.room.entity.VideoInfo
-import com.sum.room.manager.VideoCacheManager
 
 /**
  * @author mingyan.su
@@ -60,10 +53,10 @@ class HomeRepository : BaseRepository() {
         }
     }
 
-    /**
-     * 获取视频列表数据
-     */
-    suspend fun getVideoListCache(): MutableList<VideoInfo>? {
-        return VideoCacheManager.getVideoList()
-    }
+//    /**
+//     * 获取视频列表数据
+//     */
+//    suspend fun getVideoListCache(): MutableList<VideoInfo>? {
+//        return VideoCacheManager.getVideoList()
+//    }
 }

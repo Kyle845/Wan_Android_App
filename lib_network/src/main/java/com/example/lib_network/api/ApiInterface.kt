@@ -1,8 +1,6 @@
 package com.example.lib_network.api
 
-import com.example.lib_common.model.Banner
-import com.example.lib_common.model.ProjectSubList
-import com.example.lib_common.model.ProjectTabItem
+import com.example.lib_common.model.*
 import com.example.lib_network.response.BaseResponse
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded

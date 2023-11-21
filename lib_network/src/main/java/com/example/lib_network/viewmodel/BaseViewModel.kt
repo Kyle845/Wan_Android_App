@@ -6,6 +6,7 @@ import com.example.lib_framework.log.LogUtil
 import com.example.lib_network.error.ApiException
 import com.example.lib_network.error.ERROR
 import com.example.lib_network.error.ExceptionHandler
+import com.example.lib_network.flow.requestFlow
 import com.example.lib_network.response.BaseResponse
 import com.sum.network.callback.IApiErrorCallback
 import kotlinx.coroutines.Dispatchers
@@ -72,5 +73,22 @@ open class BaseViewModel : ViewModel(){
             }
         }
         return null
+    }
+
+    fun <T> launchFlow(
+        errorCall: IApiErrorCallback? = null,
+        requestCall: suspend () -> BaseResponse<T>?,
+        showLoading: ((Boolean) -> Unit)? = null,
+        successBlock:(T?) -> Unit
+    ) {
+        viewModelScope.launch(Dispatchers.Main) {
+            val data = requestFlow(errorBlock = {code, error ->
+                if (ERROR.UNLOGIN.code == code) {
+                    errorCall?.onLoginFail(code, error)
+                } else {
+                    errorCall?.onError(code, error)
+                }
+            }, requestCall, showLoading)
+        }
     }
 }

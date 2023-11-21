@@ -8,11 +8,16 @@ import android.view.View
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
-import androidx.viewpager2.widget.ViewPager2
+import com.example.lib_common.model.ProjectTabItem
+import com.example.lib_common.provider.SearchServiceProvider
 import com.example.lib_framework.base.BaseMvvmFragment
+import com.example.lib_framework.ext.gone
 import com.example.lib_framework.ext.onClick
+import com.example.lib_framework.ext.visible
+import com.example.lib_framework.utils.getStringFromResource
 import com.example.mod_main.R
 import com.example.mod_main.databinding.FragmentHomeBinding
+import com.example.mod_main.ui.home.viewmodel.HomeViewModel
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.scwang.smart.refresh.layout.api.RefreshLayout
